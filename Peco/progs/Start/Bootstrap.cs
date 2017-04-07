@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-
 using pecopeco.progs.Property;
 using System.IO;
 using Codeplex.Data;
@@ -9,9 +8,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace pecopeco.progs.Start {
-	public class Bootstrap{
+	public class Bootstrap {
 
 		BaseProperty bp = new BaseProperty();
 
@@ -31,8 +31,23 @@ namespace pecopeco.progs.Start {
 		 * 設定項目が保存してあるjsonファイルを読み出し、起動時の設定書き込みメゾッドを読み出す
 		 */
 		void setProperty() {
+
+			if(!(Directory.Exists(@"setup"))) {
+				Directory.CreateDirectory(@"setup");
+			}
+
+			
+			//将来はJsonの中身で検索、指定をかけても良いかもしれない
+			if(!(File.Exists(@"setup\peco_wholeSetup.json"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"setup\peco_wholeSetup.json",false,enc);
+				sw.Write(createFirstRuleJson());
+				sw.Close();
+			}
+
 			string line = String.Empty;
 			string str = String.Empty;
+
 			using(StreamReader r = new StreamReader(@"setup\peco_wholeSetup.json")) {
 				while((str = r.ReadLine()) != null) { // 1行ずつ読み出し。
 					line = line + str;
@@ -73,6 +88,29 @@ namespace pecopeco.progs.Start {
 				//変更無->初期設定
 				bp.CURDIR = Environment.CurrentDirectory;
 			}
+		}
+		/**------------------------------------------------------------------------------------
+		 * 
+		 */
+		String createFirstRuleJson() {
+			var obj = new {
+				JustGetStarted = new {
+					firstLaunch = false
+				},
+				EnvironmentName = new {
+					Initial = "peco",
+					change = false,
+					userSet = ""
+				},
+				CurrentDirectory = new {
+					change = false,
+					userSet = ""
+				}
+			};
+			string firstRule = "";
+			firstRule = DynamicJson.Serialize(obj);
+			dynamic parsedJson = JsonConvert.DeserializeObject(firstRule);
+			return JsonConvert.SerializeObject(parsedJson,Formatting.Indented);
 		}
 	}
 }

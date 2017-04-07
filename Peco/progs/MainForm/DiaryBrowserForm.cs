@@ -17,6 +17,9 @@ namespace pecopeco.progs.MainForm {
 		DiaryBrowserFormEngine dbfe = new DiaryBrowserFormEngine();
 
 		public DiaryBrowserForm() {
+
+
+
 			InitializeComponent();
 
 			webBrowser1.ObjectForScripting = this;
