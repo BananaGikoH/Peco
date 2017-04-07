@@ -7,7 +7,7 @@ namespace pecopeco.progs.MainForm {
 	class HomeFormEngine {
 
 		//BaseProperty BP = new BaseProperty();
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 
 
 		public string CurrentDirAdd() {

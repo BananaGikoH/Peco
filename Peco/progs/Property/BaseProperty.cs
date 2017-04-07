@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace pecopeco.progs.Property {
-	class BaseProperty_Json {
+	class BaseProperty {
 		private static dynamic SetupJson;
 		public dynamic SJ {
 			set {

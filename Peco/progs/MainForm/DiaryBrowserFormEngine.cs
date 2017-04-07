@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace pecopeco.progs.MainForm {
 	class DiaryBrowserFormEngine {
 		//*************************************************************************
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 		public string SendURI() {
 
 			Uri u1 = new Uri(BPJ.CurrentDirectory() + @"\");

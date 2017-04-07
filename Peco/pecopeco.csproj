@@ -78,7 +78,7 @@
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserFormEngine.cs" />
     <Compile Include="progs\MainForm\HomeFormEngine.cs" />
-    <Compile Include="progs\Property\BaseProperty_Json.cs" />
+    <Compile Include="progs\Property\BaseProperty.cs" />
     <Compile Include="progs\Start\Bootstrap.cs" />
     <Compile Include="progs\Start\CatchArgs.cs" />
     <Compile Include="progs\Start\Start.cs" />

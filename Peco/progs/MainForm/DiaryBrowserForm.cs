@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace pecopeco.progs.MainForm {
 	public partial class DiaryBrowserForm : Form {
 
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 
 		DiaryBrowserFormEngine dbfe = new DiaryBrowserFormEngine();
 

@@ -5,7 +5,7 @@ using pecopeco.progs.Property;
 namespace pecopeco.progs.MainForm {
 	public partial class HomeForm : Form {
 
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 		HomeFormEngine HFE = new HomeFormEngine();
 
 		public HomeForm() {

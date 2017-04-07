@@ -7,7 +7,7 @@ using pecopeco.progs.Property;
 namespace pecopeco.progs.Sys {
 	public class EditSetup {
 
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 
 		public String createFirstRuleJson() {
 			var obj = new {

@@ -1,20 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
-using pecopeco.progs.Property;
+﻿using pecopeco.progs.Property;
 using System.IO;
-using Codeplex.Data;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace pecopeco.progs.Start {
 	public class Bootstrap {
 
 		BaseProperty bp = new BaseProperty();
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 		Sys.EditSetup ES = new Sys.EditSetup();
 
 		/**
@@ -47,33 +39,6 @@ namespace pecopeco.progs.Start {
 			}
 
 			ES.startStep();
-			bootMethod(BPJ.SJ);
-
-		}
-		/**------------------------------------------------------------------------------------
-		 * 起動時の設定を入力するメソッド
-		 */
-		void bootMethod(dynamic setupjson) {
-
-			//EnvironmentName
-			bool CheckEN = setupjson.EnvironmentName.change;
-			if(CheckEN) {
-				//変更有->ユーザー独自設定
-				bp.EN = setupjson.EnvironmentName.userSet;
-			} else {
-				//変更無->初期設定
-				bp.EN = setupjson.EnvironmentName.Initial;
-			}
-
-			//CurrentDirectory
-			bool CheckCURDIR = setupjson.CurrentDirectory.change;
-			if(CheckCURDIR) {
-				//変更有->ユーザー独自設定
-				bp.CURDIR = setupjson.EnvironmentName.userSet;
-			} else {
-				//変更無->初期設定
-				bp.CURDIR = Environment.CurrentDirectory;
-			}
 		}
 	}
 }

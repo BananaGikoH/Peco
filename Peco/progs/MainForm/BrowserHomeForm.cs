@@ -15,7 +15,7 @@ namespace pecopeco.progs.MainForm {
 			
 		}
 		//BaseProperty bp = new BaseProperty();
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 
 		public string ThrowSavePath() {
 			webBrowser1.ObjectForScripting = new BrowserHomeForm();

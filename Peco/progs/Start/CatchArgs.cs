@@ -20,7 +20,7 @@ namespace pecopeco.progs.Start {
 			//argsから取った文字列で制御
 		}
 
-		BaseProperty_Json BPJ = new BaseProperty_Json();
+		BaseProperty BPJ = new BaseProperty();
 
 		/**
 		 * 引数処理
