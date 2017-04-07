@@ -25,17 +25,8 @@ namespace pecopeco.progs.Start {
 			CatchArgs ca = new CatchArgs();
 			ca.ArgsMenu(args);
 
-			//Browser B = new Browser();
-			//Application.Run(B);
-
-			//BrowserHomeForm BHF = new BrowserHomeForm();
-			//Application.Run(BHF);
-
 			DiaryBrowserForm DBF = new DiaryBrowserForm();
 			Application.Run(DBF);
-
-			//HomeForm h = new HomeForm();
-			//Application.Run(h);
 
 		}
 	}

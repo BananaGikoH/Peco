@@ -28,7 +28,7 @@ namespace pecopeco.progs.Property {
 		}
 		public string CurrentDirectory() {
 			//CurrentDirectory
-			bool CheckCURDIR = SetupJson.SJ.CurrentDirectory.change;
+			bool CheckCURDIR = SetupJson.CurrentDirectory.change;
 			if(CheckCURDIR) {
 				//変更有->ユーザー独自設定
 				return SetupJson.EnvironmentName.userSet;

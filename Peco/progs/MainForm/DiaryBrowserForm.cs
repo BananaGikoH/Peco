@@ -55,7 +55,7 @@ namespace pecopeco.progs.MainForm {
 			dbfe.save(obj,path);
 		}
 
-		public string Load(String path) {
+		public new string Load(String path) {
 			string info = string.Empty;
 			info = dbfe.load(path);
 			return info;

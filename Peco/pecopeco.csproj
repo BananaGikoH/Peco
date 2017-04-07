@@ -57,19 +57,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="progs\MainForm\BrowserHomeFormEngine.cs" />
-    <Compile Include="progs\MainForm\Browser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="progs\MainForm\Browser.Designer.cs">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="progs\MainForm\BrowserHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="progs\MainForm\BrowserHomeForm.Designer.cs">
-      <DependentUpon>BrowserHomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,17 +64,10 @@
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserFormEngine.cs" />
-    <Compile Include="progs\MainForm\HomeFormEngine.cs" />
     <Compile Include="progs\Property\BaseProperty.cs" />
     <Compile Include="progs\Start\Bootstrap.cs" />
     <Compile Include="progs\Start\CatchArgs.cs" />
     <Compile Include="progs\Start\Start.cs" />
-    <Compile Include="progs\MainForm\HomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="progs\MainForm\HomeForm.Designer.cs">
-      <DependentUpon>HomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="progs\Sys\EditSetup.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,17 +105,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="progs\MainForm\Browser.resx">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="progs\MainForm\BrowserHomeForm.resx">
-      <DependentUpon>BrowserHomeForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="progs\MainForm\DiaryBrowserForm.resx">
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="progs\MainForm\HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
