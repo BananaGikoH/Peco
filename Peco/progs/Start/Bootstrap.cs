@@ -1,12 +1,12 @@
 ﻿using pecopeco.progs.Property;
+using pecopeco.progs.MainForm;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 namespace pecopeco.progs.Start {
 	public class Bootstrap {
-
-		BaseProperty bp = new BaseProperty();
-		BaseProperty BPJ = new BaseProperty();
+		BaseProperty BP = new BaseProperty();
 		Sys.EditSetup ES = new Sys.EditSetup();
 
 		/**
@@ -17,7 +17,6 @@ namespace pecopeco.progs.Start {
 			//全体の設定項目のセット
 			setProperty();
 		}
-
 		/**-----------------------------------------------------------------------------------
 		 * 全体の設定項目のセットを行う
 		 * 設定項目が保存してあるjsonファイルを読み出す
@@ -39,6 +38,19 @@ namespace pecopeco.progs.Start {
 			}
 
 			ES.startStep();
+
+			//初期設定のためのHTMLを作成
+			if(BP.SJ.JustGetStarted.firstLaunch) {
+				//setupの中にHTML作成
+				//
+
+				SettingForm SF = new SettingForm();
+				Application.Run(SF);
+
+				//firstLaunchをfalseに
+				BP.SJ.JustGetStarted.firstLaunch = false;
+				BP.UpdateSJ();
+			}
 		}
 	}
 }

@@ -29,6 +29,7 @@ namespace pecopeco.progs.Sys {
 			dynamic parsedJson = JsonConvert.DeserializeObject(firstRule);
 			return JsonConvert.SerializeObject(parsedJson,Formatting.Indented);
 		}
+
 		public void startStep() {
 			string line = String.Empty;
 			string str = String.Empty;
@@ -45,6 +46,7 @@ namespace pecopeco.progs.Sys {
 				//警告、うまくファイルを開けませんでした。
 			}
 		}
+
 	}
 }
 

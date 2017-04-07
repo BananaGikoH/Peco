@@ -64,6 +64,12 @@
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserFormEngine.cs" />
+    <Compile Include="progs\MainForm\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progs\MainForm\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="progs\Property\BaseProperty.cs" />
     <Compile Include="progs\Start\Bootstrap.cs" />
     <Compile Include="progs\Start\CatchArgs.cs" />
@@ -107,6 +113,9 @@
   <ItemGroup>
     <EmbeddedResource Include="progs\MainForm\DiaryBrowserForm.resx">
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progs\MainForm\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
