@@ -1,19 +1,15 @@
 ﻿using pecopeco.progs.Property;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pecopeco.progs.MainForm {
 	class DiaryBrowserFormEngine {
 		//*************************************************************************
-		BaseProperty bp = new BaseProperty();
+		BaseProperty_Json BPJ = new BaseProperty_Json();
 		public string SendURI() {
 
-			Uri u1 = new Uri(bp.CURDIR + @"\");
+			Uri u1 = new Uri(BPJ.CurrentDirectory() + @"\");
 			Uri u2 = new Uri(u1,@"Diary\DiaryBasic.html");
 
 			return u2.AbsoluteUri;

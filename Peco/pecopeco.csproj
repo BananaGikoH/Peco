@@ -78,8 +78,8 @@
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserFormEngine.cs" />
     <Compile Include="progs\MainForm\HomeFormEngine.cs" />
+    <Compile Include="progs\Property\BaseProperty_Json.cs" />
     <Compile Include="progs\Start\Bootstrap.cs" />
-    <Compile Include="progs\Property\BaseProperty.cs" />
     <Compile Include="progs\Start\CatchArgs.cs" />
     <Compile Include="progs\Start\Start.cs" />
     <Compile Include="progs\MainForm\HomeForm.cs">
@@ -88,8 +88,7 @@
     <Compile Include="progs\MainForm\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="progs\Sys\CardinalAct.cs" />
-    <Compile Include="progs\Sys\EditJson.cs" />
+    <Compile Include="progs\Sys\EditSetup.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

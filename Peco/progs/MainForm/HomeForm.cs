@@ -1,14 +1,11 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using pecopeco.progs.Property;
-using pecopeco.progs.Sys;
-using Codeplex.Data;
 
 namespace pecopeco.progs.MainForm {
 	public partial class HomeForm : Form {
 
-		BaseProperty BP = new BaseProperty();
+		BaseProperty_Json BPJ = new BaseProperty_Json();
 		HomeFormEngine HFE = new HomeFormEngine();
 
 		public HomeForm() {
@@ -17,7 +14,7 @@ namespace pecopeco.progs.MainForm {
 			BootingSet();
 		}
 		void BootingSet() {
-			Text = BP.EN;
+			Text = BPJ.EnvironmentName();
 		}
 		private void ToolStripMenuItem_Click(object sender,EventArgs e) {
 			Environment.Exit(0);
@@ -50,7 +47,7 @@ namespace pecopeco.progs.MainForm {
 		private void button4_Click(object sender,EventArgs e) {
 			//Json保存
 			string[] throwWords = { "","","","","","","" };
-			throwWords[0] = BP.CURDIR + @"\test\jsonData.json";
+			throwWords[0] = BPJ.CurrentDirectory() + @"\test\jsonData.json";
 			throwWords[1] = textBox1.Text; throwWords[2] = textBox2.Text;
 			throwWords[3] = textBox3.Text; throwWords[4] = textBox4.Text;
 			throwWords[5] = textBox5.Text; throwWords[6] = textBox6.Text;

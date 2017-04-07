@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using pecopeco.progs.Property;
+﻿using pecopeco.progs.Property;
 using System.IO;
 using Codeplex.Data;
 using System.Windows.Forms;
-using pecopeco.progs.Sys;
 
 namespace pecopeco.progs.MainForm {
 	class HomeFormEngine {
 
-		BaseProperty BP = new BaseProperty();
+		//BaseProperty BP = new BaseProperty();
+		BaseProperty_Json BPJ = new BaseProperty_Json();
 
-		
+
 		public string CurrentDirAdd() {
-			return BP.CURDIR;
+			return BPJ.CurrentDirectory();
 		}
 
 		public string[] textFricker(string s1,string s2,string s3,string s4,string s5,string s6) {
@@ -96,6 +91,7 @@ namespace pecopeco.progs.MainForm {
 				}
 			};
 
+			/*
 			CardinalAct CA = new CardinalAct();
 			var TimeDynamic = DynamicJson.Parse(CA.GetTimeNow().ToString());
 
@@ -108,7 +104,8 @@ namespace pecopeco.progs.MainForm {
 				minute = TimeDynamic.minute,
 				second = TimeDynamic.second
 			};
-
+			*/
+			
 			string jsonstr = DynamicJson.Serialize(root);
 		}
 

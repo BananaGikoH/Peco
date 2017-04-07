@@ -1,9 +1,5 @@
 ﻿using pecopeco.progs.Property;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pecopeco.progs.Start {
@@ -24,7 +20,7 @@ namespace pecopeco.progs.Start {
 			//argsから取った文字列で制御
 		}
 
-		BaseProperty bp = new BaseProperty();
+		BaseProperty_Json BPJ = new BaseProperty_Json();
 
 		/**
 		 * 引数処理
@@ -46,7 +42,7 @@ namespace pecopeco.progs.Start {
 				//-で始まってなければ間違い
 				if(stTarget.StartsWith("-")) {
 					//引数処理
-					MessageBox.Show("オプション操作です：" + check.args[0],bp.EN + " option");
+					MessageBox.Show("オプション操作です：" + check.args[0],BPJ.EnvironmentName()+ " option");
 				} else {
 					//間違ってコマンド入力した場合
 					check.MissTheWriteArgs = true;
@@ -56,8 +52,8 @@ namespace pecopeco.progs.Start {
 			if(check.MissTheWriteArgs == true) {
 				//TODO:Bottunに変えること
 
-				MessageBox.Show("適切なオプション指示ではありません",bp.EN + " error");
-				MessageBox.Show("プログラムを終了します。",bp.EN + " error");
+				MessageBox.Show("適切なオプション指示ではありません",BPJ.EnvironmentName() + " error");
+				MessageBox.Show("プログラムを終了します。",BPJ.EnvironmentName() + " error");
 				Environment.Exit(0);
 			}
 		}

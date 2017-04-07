@@ -1,13 +1,6 @@
 ﻿using Codeplex.Data;
 using pecopeco.progs.Property;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pecopeco.progs.MainForm {
@@ -21,11 +14,12 @@ namespace pecopeco.progs.MainForm {
 				new Uri("file:///C:/Users/pecopeco/Documents/workspace/Chush/Peco/Peco/bin/Debug/test/preDiary/DiaryBase.html"));
 			
 		}
-		BaseProperty bp = new BaseProperty();
+		//BaseProperty bp = new BaseProperty();
+		BaseProperty_Json BPJ = new BaseProperty_Json();
 
 		public string ThrowSavePath() {
 			webBrowser1.ObjectForScripting = new BrowserHomeForm();
-			return bp.CURDIR + @"\test\QandA.json";
+			return BPJ.CurrentDirectory()+ @"\test\QandA.json";
 		}
 		BrowserHomeFormEngine bhfe = new BrowserHomeFormEngine();
 
@@ -39,7 +33,7 @@ namespace pecopeco.progs.MainForm {
 
 			OpenFileDialog ofd = new OpenFileDialog();
 			ofd.Title = "開くファイルを選択してください";
-			ofd.InitialDirectory = bp.CURDIR;
+			ofd.InitialDirectory = BPJ.CurrentDirectory();
 			ofd.RestoreDirectory = true;
 			if(ofd.ShowDialog() == DialogResult.OK) {
 				//OKボタンがクリックされたとき、選択されたファイル名を表示する
