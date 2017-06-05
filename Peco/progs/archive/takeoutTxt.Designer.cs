@@ -61,12 +61,38 @@ namespace pecopeco.progs.archive {
         }
         
         /// <summary>
+        ///   function start()
+        ///{
+        ///    //テンプレート文字列をロード
+        ///    var path = window.external.ThrowTemplatePath();
+        ///    var flame =document.getElementsByName(&quot;Tamplate&quot;);
+        ///    flame[0].innerHTML = path;
+        ///    
+        ///    //保存先パス文字列をロード
+        ///    var foo = window.external.ThrowSavePath();
+        ///    var ooo =document.getElementsByName(&quot;PathOfSave&quot;);
+        ///    ooo[0].innerHTML = foo;
+        ///    
+        ///    //テンプレートをロード
+        ///    var info = window.external.Load(flame[0].innerHTML);
+        ///    var obj = JSON.parse(info);
+        ///    
+        ///    //g チャプターの中の種別選択
+        ///    var ChapterSelect = obj [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Diary_JavaScript_js {
+            get {
+                return ResourceManager.GetString("Diary_JavaScript_js", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   &lt;?xml version=&quot;1.0&quot; encording=&quot;UTF-8&quot;?&gt;
         ///&lt;html&gt;
         ///&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
         ///&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=11&quot; /&gt;
         ///&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;DiaryCSS.css&quot;&gt;
-        ///&lt;script type=&quot;text/javascript&quot; src=&quot;Diary_JavaScript.js&quot;&gt;&lt;/script&gt;
+        ///&lt;script type=&quot;text/javascript&quot; src=&quot;Diary_Javascript.js&quot;&gt;&lt;/script&gt;
         ///
         ///&lt;body&gt;
         ///&lt;br&gt;
@@ -129,32 +155,6 @@ namespace pecopeco.progs.archive {
         internal static string DiaryCSS_css {
             get {
                 return ResourceManager.GetString("DiaryCSS_css", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   function start()
-        ///{
-        ///    //テンプレート文字列をロード
-        ///    var path = window.external.ThrowTemplatePath();
-        ///    var flame =document.getElementsByName(&quot;Tamplate&quot;);
-        ///    flame[0].innerHTML = path;
-        ///    
-        ///    //保存先パス文字列をロード
-        ///    var foo = window.external.ThrowSavePath();
-        ///    var ooo =document.getElementsByName(&quot;PathOfSave&quot;);
-        ///    ooo[0].innerHTML = foo;
-        ///    
-        ///    //テンプレートをロード
-        ///    var info = window.external.Load(flame[0].innerHTML);
-        ///    var obj = JSON.parse(info);
-        ///    
-        ///    //g チャプターの中の種別選択
-        ///    var ChapterSelect = obj [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DiaryJavascript_js {
-            get {
-                return ResourceManager.GetString("DiaryJavascript_js", resourceCulture);
             }
         }
         

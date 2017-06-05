@@ -123,7 +123,7 @@
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
 &lt;meta http-equiv="X-UA-Compatible" content="IE=11" /&gt;
 &lt;link rel="stylesheet" type="text/css" href="DiaryCSS.css"&gt;
-&lt;script type="text/javascript" src="Diary_JavaScript.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="Diary_Javascript.js"&gt;&lt;/script&gt;
 
 &lt;body&gt;
 &lt;br&gt;
@@ -563,7 +563,7 @@ id 各個別に設定したいとき
 	left:40px;
 }</value>
   </data>
-  <data name="DiaryJavascript_js" xml:space="preserve">
+  <data name="Diary_JavaScript_js" xml:space="preserve">
     <value>function start()
 {
     //テンプレート文字列をロード
@@ -682,7 +682,7 @@ function JsonSave(str)
     
     var path = document.getElementsByName("PathOfSave");
     alert(path[0].innerHTML);
-    window.external.Save(path[0].value,mani);
+    window.external.Save(path[0].innerHTML,mani);
 }</value>
   </data>
   <data name="ExampleDiaryQuestion_json" xml:space="preserve">
