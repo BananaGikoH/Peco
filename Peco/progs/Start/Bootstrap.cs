@@ -1,19 +1,14 @@
-﻿using System;
-using System.Windows.Forms;
-
-using pecopeco.progs.Property;
+﻿using pecopeco.progs.Property;
+using pecopeco.progs.MainForm;
 using System.IO;
-using Codeplex.Data;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+using pecopeco.progs.archive;
 
 namespace pecopeco.progs.Start {
-	public class Bootstrap{
-
-		BaseProperty bp = new BaseProperty();
+	public class Bootstrap {
+		BaseProperty BP = new BaseProperty();
+		Sys.EditSetup ES = new Sys.EditSetup();
 
 		/**
 		 * 最初の起動のためにやることを設定し、アプリを起動する
@@ -23,56 +18,66 @@ namespace pecopeco.progs.Start {
 			//全体の設定項目のセット
 			setProperty();
 		}
-
-
-
 		/**-----------------------------------------------------------------------------------
 		 * 全体の設定項目のセットを行う
-		 * 設定項目が保存してあるjsonファイルを読み出し、起動時の設定書き込みメゾッドを読み出す
+		 * 設定項目が保存してあるjsonファイルを読み出す
+		 * 完全に初期起動だった場合、設定ファイルを作成
+		 * 過去に起動している場合は、起動時の設定書き込みメゾッドを読み出す
 		 */
 		void setProperty() {
-			string line = String.Empty;
-			string str = String.Empty;
-			using(StreamReader r = new StreamReader(@"setup\peco_wholeSetup.json")) {
-				while((str = r.ReadLine()) != null) { // 1行ずつ読み出し。
-					line = line + str;
-				}
+
+			//リソースファイルを書き出す
+			if(!(Directory.Exists(@"Diary"))) {
+				Directory.CreateDirectory(@"Diary");
+			}
+			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html");
+				sw.Write(takeoutTxt.DiaryBasic_html);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\Diary_JavaScript.js"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\Diary_JavaScript.js");
+				sw.Write(takeoutTxt.Diary_JavaScript_js);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\DiaryCSS.css"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css");
+				sw.Write(takeoutTxt.DiaryCSS_css);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\ExampleDiaryQuestion.json"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json");
+				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
+				sw.Close();
 			}
 
-			if(line != String.Empty) {
-				//jsonファイル書き込まれている場合
-				var setupjson = DynamicJson.Parse(line);
-				bootMethod(setupjson);
-			} else {
-				//jsonファイル書き込まれてない・見つからない場合
-				//jsonファイル新規作成→初期内容書き込み
-			}
-		}
-
-		/**------------------------------------------------------------------------------------
-		 * 起動時の設定を入力するメソッド
-		 */
-		void bootMethod(dynamic setupjson) {
-
-			//EnvironmentName
-			bool CheckEN = setupjson.EnvironmentName.change;
-			if(CheckEN) {
-				//変更有->ユーザー独自設定
-				bp.EN = setupjson.EnvironmentName.userSet;
-			} else {
-				//変更無->初期設定
-				bp.EN = setupjson.EnvironmentName.Initial;
+			if(!(Directory.Exists(@"setup"))) {
+				Directory.CreateDirectory(@"setup");
 			}
 
-			//CurrentDirectory
-			bool CheckCURDIR = setupjson.CurrentDirectory.change;
-			if(CheckCURDIR) {
-				//変更有->ユーザー独自設定
-				bp.CURDIR = setupjson.EnvironmentName.userSet;
-			} else {
-				//変更無->初期設定
-				bp.CURDIR = Environment.CurrentDirectory;
+			//将来はJsonの中身で検索、指定をかけても良いかもしれない
+			if(!(File.Exists(@"setup\peco_wholeSetup.json"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"setup\peco_wholeSetup.json",false,enc);
+				sw.Write(ES.createFirstRuleJson());
+				sw.Close();
+			}
+
+			ES.startStep();
+
+			//初期設定のためのHTMLを作成
+			if(BP.SJ.JustGetStarted.firstLaunch) {
+				//setupの中にHTML作成
+				//
+
+				SettingForm SF = new SettingForm();
+				Application.Run(SF);
+
+				//firstLaunchをfalseに
+				BP.SJ.JustGetStarted.firstLaunch = false;
+				BP.UpdateSJ();
 			}
 		}
 	}
 }
+

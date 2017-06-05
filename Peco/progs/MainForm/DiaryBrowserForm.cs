@@ -13,10 +13,14 @@ using System.Windows.Forms;
 namespace pecopeco.progs.MainForm {
 	public partial class DiaryBrowserForm : Form {
 
-		BaseProperty bp = new BaseProperty();
+		BaseProperty BPJ = new BaseProperty();
+
 		DiaryBrowserFormEngine dbfe = new DiaryBrowserFormEngine();
 
 		public DiaryBrowserForm() {
+
+
+
 			InitializeComponent();
 
 			webBrowser1.ObjectForScripting = this;
@@ -25,10 +29,10 @@ namespace pecopeco.progs.MainForm {
 		}
 
 		public string ThrowSavePath() {
-			return bp.CURDIR + @"\Diary\Diary_2017-01-01.json";
+			return BPJ.CurrentDirectory() + @"\Diary\Diary_2017-01-01.json";
 		}
 		public string ThrowTemplatePath() {
-			return bp.CURDIR +@"\Diary\ExampleDiaryQuestion.json";
+			return BPJ.CurrentDirectory() + @"\Diary\ExampleDiaryQuestion.json";
 		}
 
 		public string OpenDirDialog() {
@@ -36,7 +40,7 @@ namespace pecopeco.progs.MainForm {
 
 			FolderBrowserDialog fbd = new FolderBrowserDialog();
 			fbd.Description = "開くフォルダを選択してください";
-			fbd.SelectedPath = bp.CURDIR;
+			fbd.SelectedPath = BPJ.CurrentDirectory();
 			fbd.ShowNewFolderButton = true;
 			if(fbd.ShowDialog() == DialogResult.OK) {
 				//OKボタンがクリックされたとき、選択されたファイル名を表示する
@@ -51,7 +55,7 @@ namespace pecopeco.progs.MainForm {
 			dbfe.save(obj,path);
 		}
 
-		public string Load(String path) {
+		public new string Load(String path) {
 			string info = string.Empty;
 			info = dbfe.load(path);
 			return info;

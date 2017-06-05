@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DiaryBasic_html" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encording="UTF-8"?&gt;
+&lt;html&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=11" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="DiaryCSS.css"&gt;
+&lt;script type="text/javascript" src="Diary_Javascript.js"&gt;&lt;/script&gt;
+
+&lt;body&gt;
+&lt;br&gt;
+&lt;center&gt;
+	&lt;hr&gt;
+	&lt;h3&gt;&lt;font color=blue&gt;日記帳&lt;/font&gt;&lt;/h3&gt;
+	&lt;h4&gt;現在時刻 : ～～&lt;/h4&gt;
+	&lt;hr&gt;
+&lt;/center&gt;
+
+&lt;div class=Diary name="Diary"&gt;
+	&lt;h4&gt;使用しているテンプレート&lt;/h4&gt;
+	Path : &lt;span name="Tamplate"&gt;Default Path&lt;/span&gt;&lt;br&gt;
+	varsion type: &lt;span name="TamplateVarsionType"&gt;(ex)Hush&lt;/span&gt;&lt;br&gt;
+	varsion : &lt;span name="TamplateVarsion"&gt;～&lt;/span&gt;&lt;br&gt;
+	&lt;br&gt;
+	テンプレートを選択&lt;br&gt;
+	&lt;BUTTON type="button" name ="TamplateChoose" onClick=""&gt;選ぶ&lt;/BUTTON&gt; : &lt;INPUT type="text" name="TamplatePath" size="80" value="選択して下さい"&gt;&lt;br&gt;
+	&lt;br&gt;
+	&lt;BUTTON type="button" name ="TamplateChange" onClick=""&gt;変更&lt;/BUTTON&gt;&lt;br&gt;
+	&lt;br&gt;
+	
+	&lt;h4&gt;保存先&lt;/h4&gt;
+	保存先の選択 &lt;BUTTON type="button" name ="ShowPathOfSave" onClick="PathOfSave_Botton_Click()"&gt;選択&lt;/BUTTON&gt;&lt;br&gt;
+	Path : &lt;span name="PathOfSave"&gt;Default Save Path&lt;/span&gt;&lt;br&gt;
+	&lt;br&gt;
+	&lt;br&gt;
+	&lt;form class =Article name="TodaysEvents"&gt;
+		&lt;div class=Subject&gt;
+			&lt;div name="Subject_TodaysEvents"&gt;$1&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Substance&gt;
+			&lt;div name="Substance_TodaysEvents"&gt;$2&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class =Forms&gt;
+			&lt;div name="TodaysEvents_1"&gt;
+				&lt;div class=FormNum name="TodaysEvents_1_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_1_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_1_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_1_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_1_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_1_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_1_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="TodaysEvents_2"&gt;
+				&lt;div class=FormNum name="TodaysEvents_2_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_2_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_2_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_2_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_2_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_2_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_2_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="TodaysEvents_3"&gt;
+				&lt;div class=FormNum name="TodaysEvents_3_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_3_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_3_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_3_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_3_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysEvents_3_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysEvents_3_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Save&gt;
+			&lt;table class=SaveAndTimes&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;BUTTON type="button" name ="TodaysEvents_SaveBotton" onClick="JsonSave('TodaysEvents')"&gt;保存&lt;/BUTTON&gt;&lt;/td&gt;&lt;td&gt;&lt;span name ="TodaysEvents_SaveTime"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan=2&gt;&lt;textarea cols="55" rows="6" name ="TodaysEvents_JsonString" readonly wrap=hard&gt;&lt;/textarea&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;!--json文字列--&gt;
+				&lt;!--一回一回読み込んで、入れる場所を確認したうえで保存--&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;br&gt;
+	&lt;/form&gt;
+	&lt;form class =Article name="TodaysNews"&gt;
+		&lt;div class=Subject&gt;
+			&lt;div name="Subject_TodaysNews"&gt;$1&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Substance&gt;
+			&lt;div name="Substance_TodaysNews"&gt;$2&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class =Forms&gt;
+			&lt;div name="TodaysNews_1"&gt;
+				&lt;div class=FormNum name="TodaysNews_1_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_1_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_1_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_1_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_1_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_1_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_1_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="TodaysNews_2"&gt;
+				&lt;div class=FormNum name="TodaysNews_2_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_2_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_2_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_2_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_2_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_2_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_2_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="TodaysNews_3"&gt;
+				&lt;div class=FormNum name="TodaysNews_3_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_3_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_3_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_3_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_3_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="TodaysNews_3_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysNews_3_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Save&gt;
+			&lt;table class=SaveAndTimes&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;BUTTON type="button" name ="TodaysNews_SaveBotton" onClick="JsonSave('TodaysNews')"&gt;保存&lt;/BUTTON&gt;&lt;/td&gt;&lt;td&gt;&lt;span name ="TodaysNews_SaveTime"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan=2&gt;&lt;textarea cols="55" rows="6" name ="TodaysNews_JsonString" readonly wrap=hard&gt;&lt;/textarea&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;br&gt;
+	&lt;/form&gt;
+	&lt;div name=TodaysSchedule class =Article&gt;
+		&lt;div class=Subject&gt;
+			&lt;div name=Subject_TodaysSchedule&gt;$1&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Substance&gt;
+			&lt;div name=Substance_TodaysSchedule&gt;$2&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;form class =Forms&gt;
+			&lt;div&gt;
+				&lt;div class=FormNum name=TodaysSchedule_1_num&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_1_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_1_Answer1"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_1_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;
+				&lt;td&gt;
+				&lt;select name="TodaysSchedule_1_Answer2"&gt;
+				&lt;option value="space" selected&gt;&lt;/option&gt;
+				&lt;option value="○"&gt;○&lt;/option&gt;
+				&lt;option value="△"&gt;△&lt;/option&gt;
+				&lt;option value="□"&gt;□&lt;/option&gt;
+				&lt;option value="×"&gt;×&lt;/option&gt;
+				&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_1_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_1_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_1_Question4"&gt;$4&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_1_Answer4"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;div class=FormNum name=TodaysSchedule_2_num&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_2_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_2_Answer1"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_2_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;
+				&lt;td&gt;
+				&lt;select name="TodaysSchedule_2_Answer2"&gt;
+				&lt;option value="space" selected&gt;&lt;/option&gt;
+				&lt;option value="○"&gt;○&lt;/option&gt;
+				&lt;option value="△"&gt;△&lt;/option&gt;
+				&lt;option value="□"&gt;□&lt;/option&gt;
+				&lt;option value="×"&gt;×&lt;/option&gt;
+				&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_2_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_2_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_2_Question4"&gt;$4&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_2_Answer4"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;div class=FormNum name=TodaysSchedule_3_num&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_3_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_3_Answer1"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_3_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;
+				&lt;td&gt;
+				&lt;select name="TodaysSchedule_3_Answer2"&gt;
+				&lt;option value="space" selected&gt;&lt;/option&gt;
+				&lt;option value="○"&gt;○&lt;/option&gt;
+				&lt;option value="△"&gt;△&lt;/option&gt;
+				&lt;option value="□"&gt;□&lt;/option&gt;
+				&lt;option value="×"&gt;×&lt;/option&gt;
+				&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_3_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_3_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;span name="TodaysSchedule_3_Question4"&gt;$4&lt;/span&gt;&lt;/td&gt;&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="TodaysSchedule_3_Answer4"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+		&lt;div class=Save&gt;
+			&lt;table class=SaveAndTimes&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;BUTTON type="button" name ="TodaysSchedule_SaveBotton" onClick="JsonSave('TodaysSchedule')"&gt;保存&lt;/BUTTON&gt;&lt;/td&gt;&lt;td&gt;&lt;span name ="TodaysSchedule_SaveTime"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan=2&gt;&lt;textarea cols="55" rows="6" name ="TodaysSchedule_JsonString" readonly wrap=hard&gt;&lt;/textarea&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;br&gt;
+	&lt;/div&gt;
+	&lt;div name=ExperienceAndFeel class =Article&gt;
+		&lt;div class=Subject&gt;
+			&lt;div name=Subject_ExperienceAndFeel&gt;$1&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Substance&gt;
+			&lt;div name=Substance_ExperienceAndFeel&gt;$2&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class =Forms&gt;
+			&lt;div name="ExperienceAndFeel_1"&gt;
+				&lt;div class=FormNum name="ExperienceAndFeel_1_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_1_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_1_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_1_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_1_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_1_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_1_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="ExperienceAndFeel_2"&gt;
+				&lt;div class=FormNum name="ExperienceAndFeel_2_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_2_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_2_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_2_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_2_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_2_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_2_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div name="ExperienceAndFeel_3"&gt;
+				&lt;div class=FormNum name="ExperienceAndFeel_3_num"&gt;0&lt;/div&gt;
+				&lt;table class=Contents&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_3_Question1"&gt;$1&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_3_Answer1"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_3_Question2"&gt;$2&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_3_Answer2"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan =2&gt;&lt;span name="ExperienceAndFeel_3_Question3"&gt;$3&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt; : &lt;/td&gt;&lt;td&gt;&lt;INPUT type="text" name="ExperienceAndFeel_3_Answer3"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=Save&gt;
+			&lt;table class=SaveAndTimes&gt;
+				&lt;tr&gt;
+				&lt;td&gt;&lt;BUTTON type="button" name ="ExperienceAndFeel_SaveBotton" onClick="JsonSave('ExperienceAndFeel')"&gt;保存&lt;/BUTTON&gt;&lt;/td&gt;&lt;td&gt;&lt;span name ="ExperienceAndFeel_SaveTime"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td colspan=2&gt;&lt;textarea cols="55" rows="6" name ="ExperienceAndFeel_JsonString" readonly wrap=hard&gt;&lt;/textarea&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;br&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--
+class 個別に指定するとき
+name 文字を変更したりjsで変更したりするとき
+id 各個別に設定したいとき
+--&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="DiaryCSS_css" xml:space="preserve">
+    <value>* {
+	position:relative;
+	left:0px;
+	top:0px;
+}
+
+.Diary {
+	position:relative;
+	left:200px;
+}
+.Article {
+	position:relative;
+	left:30px;
+}
+.Subject {
+	font-weight: bold;
+	color:blue;
+}
+.Substance {
+	font-weight: bold;
+}
+.Forms {
+	position:relative;
+	top:15px;
+	left:50px;
+}
+.FormNum {
+}
+.Contents {
+	position:relative;
+	left:20px;
+}
+.Save{
+	position:relative;
+	top:15px;
+	left:40px;
+}</value>
+  </data>
+  <data name="Diary_JavaScript_js" xml:space="preserve">
+    <value>function start()
+{
+    //テンプレート文字列をロード
+    var path = window.external.ThrowTemplatePath();
+    var flame =document.getElementsByName("Tamplate");
+    flame[0].innerHTML = path;
+    
+    //保存先パス文字列をロード
+    var foo = window.external.ThrowSavePath();
+    var ooo =document.getElementsByName("PathOfSave");
+    ooo[0].innerHTML = foo;
+    
+    //テンプレートをロード
+    var info = window.external.Load(flame[0].innerHTML);
+    var obj = JSON.parse(info);
+    
+    //g チャプターの中の種別選択
+    var ChapterSelect = obj.Index.Contents.Chapter.sumTotal;
+    for(var g=1;g&lt;=ChapterSelect;g++){
+        
+        var ChapterName = obj.Index.Contents.Chapter["n"+String(g)]["name"];
+        var ChapterSubject = obj.Index.Contents.Chapter["n"+String(g)]["Subject"];
+        var ChapterSubstance = obj.Index.Contents.Chapter["n"+String(g)]["Substance"];
+        var sbj = document.getElementsByName("Subject_"+ChapterName);
+        var sbs = document.getElementsByName("Substance_"+ChapterName);
+        sbj[0].innerHTML = ChapterSubject;
+        sbs[0].innerHTML = ChapterSubstance;
+        
+        //i 初期項目数設定
+        var initualTimes = obj.Index.Contents.Chapter["n"+String(g)]["initualTimes"];
+        
+        //j 項目の中のform数
+        var sumTotal = obj.Index.Contents.Chapter["n"+String(g)]["item"]["Questions"]["sumTotal"];
+        for(var i=1;i&lt;=initualTimes;i++){
+            for(var j=1;j&lt;=sumTotal;j++){
+                var ChapterNumber = document.getElementsByName(ChapterName+"_"+String(i)+"_num");
+                ChapterNumber[0].innerHTML = String(i);
+                var Qwrite = document.getElementsByName(ChapterName+"_"+String(i)+"_Question"+String(j));
+                Qwrite[0].innerHTML = obj.Index.Contents.Chapter["n"+String(g)]
+                        ["item"]["Questions"]["n"+String(j)]["article"];
+            }
+        }
+    }
+}
+window.onload = start;
+//----------------------------------------------------
+function PathOfSave_Botton_Click()
+{
+    var loadPath = window.external.OpenDirDialog();
+    alert(loadPath);
+    var POS= document.getElementsByName("PathOfSave");
+    POS[0].innerHTML  = loadPath;
+}
+function JsonSave(str)
+{
+    //テンプレートをロード
+    var temp =document.getElementsByName("Tamplate");
+    var info = window.external.Load(temp[0].innerHTML);
+    var TemplateObject = JSON.parse(info);
+    
+    //ChapSumTotal チャプター数
+    var ChapSumTotal = TemplateObject.Index.Contents.Chapter.sumTotal;
+    
+    //Chapters テンプレートのチャプター文字列、チャプター番号を格納
+    var Chapters = new Array();
+    for(var k=1;k&lt;=ChapSumTotal;k++){
+        Chapters[k]=TemplateObject.Index.Contents.Chapter["n"+String(k)]["name"];
+    }
+    
+    //nameによってチャプターを選択する
+    var chooseChap = 0;
+    for(var g=1;g&lt;=ChapSumTotal;g++){
+        if(Chapters[g]==str){
+            chooseChap=g;
+        }
+    }
+    //----------------------------------------------------//
+    //既存の今日のデータをロード
+    var PoS =document.getElementsByName("PathOfSave");
+    var LoadExistFile = window.external.Load(PoS[0].innerHTML);
+    var JsonData = null;
+    
+    if(LoadExistFile!=""){
+        //既存のデータが存在するとき
+        JsonData = JSON.parse(LoadExistFile);
+        alert(JSON.stringify(JsonData));
+    }else{
+        //既存のデータが存在しない時
+        var JsonData = new Object();
+        JsonData.QandA =new Object();
+    }
+    JsonData.QandA[str] =new Object();
+    //----------------------------------------------------//
+    
+    //i 初期項目数設定
+    var initualTimes = TemplateObject.Index.Contents.Chapter["n"+String(chooseChap)]["initualTimes"];
+    
+    //j 項目の中のform数
+    var sumTotal = TemplateObject.Index.Contents.Chapter["n"+String(chooseChap)]
+                   ["item"]["Questions"]["sumTotal"];
+    
+    for(var i=1;i&lt;=initualTimes;i++){
+        JsonData.QandA[str][str+"_"+String(i)] =new Object();
+        for(var j=1;j&lt;=sumTotal;j++){
+            JsonData.QandA[str][str+"_"+String(i)][str+"_"+String(i)+"_"+String(j)] =new Object();
+            var Q11=document.getElementsByName(str+"_"+String(i)+"_Question"+String(j));
+            var A11=document.getElementsByName(str+"_"+String(i)+"_Answer"+String(j));
+            JsonData.QandA[str][str+"_"+String(i)][str+"_"+String(i)+"_"+String(j)].Q =Q11[0].innerHTML;
+            JsonData.QandA[str][str+"_"+String(i)][str+"_"+String(i)+"_"+String(j)].A =A11[0].value;
+        }
+    }
+    
+    var mani = JSON.stringify(JsonData);
+    var TEJson = document.getElementsByName(str+"_JsonString");
+    TEJson[0].innerHTML = mani;
+    
+    var path = document.getElementsByName("PathOfSave");
+    alert(path[0].innerHTML);
+    window.external.Save(path[0].innerHTML,mani);
+}</value>
+  </data>
+  <data name="ExampleDiaryQuestion_json" xml:space="preserve">
+    <value>{
+    "Index": {
+        "name": "Diary",
+        "type":"Template",
+        "identifyTemplate":{
+            "type": "Hush",
+            "code": "BBBB-BBBB-BBBB-BBBB-BBBB"
+        },
+        "virsion": {
+            "type": "Hush",
+            "code": "AAAA-AAAA-AAAA-AAAA-AAAA",
+            "previous":""
+        },
+        "DataIndex":{
+            "name":{
+                "regulation":["date"],
+                "Substance":"Diary-yyyy-mm-dd"
+            }
+        },
+        "Contents": {
+            "name": "Diary",
+            "Chapter": {
+                "sumTotal":4,
+                "n1": {
+                    "name": "TodaysEvents",
+                    "Subject": "・今日の主な出来事",
+                    "Substance": "今日の自分の出来事を書き込む",
+                    "initualTimes": 3,
+                    "item": {
+                        "system": "QandA",
+                        "Questions": {
+                            "sumTotal":3,
+                            "struct":{
+                                "tr1":{
+                                    "td1":"n1"
+                                },
+                                "tr2":{
+                                    "td1":" : ",
+                                    "td1":"n2"
+                                }
+                            },
+                            "n1": {
+                                "form": "textBox",
+                                "article": "タイトル"
+                            },
+                            "n2": {
+                                "form": "textbox",
+                                "article": "内容"
+                            },
+                            "n3": {
+                                "form": "textbox",
+                                "article": "タグ"
+                            }
+                        }
+                    }
+                },
+                "n2": {
+                    "name": "TodaysNews",
+                    "Subject": "・今日の主なニュース",
+                    "Substance": "今日の自分の身の周りに起こった出来事やニュースを書き込む",
+                    "initualTimes": 3,
+                    "item": {
+                        "system": "QandA",
+                        "Questions": {
+                            "sumTotal":3,
+                            "struct":{
+                                "tr1":{
+                                    "td1":"n1"
+                                },
+                                "tr2":{
+                                    "td1":"n2"
+                                },
+                                "tr3":{
+                                    "td1":"n3"
+                                }
+                            },
+                            "n1": {
+                                "form": "textBox",
+                                "article": "タイトル"
+                            },
+                            "n2": {
+                                "form": "textbox",
+                                "article": "内容"
+                            },
+                            "n3": {
+                                "form": "textbox",
+                                "article": "タグ"
+                            }
+                        }
+                    }
+                },
+                "n3":{
+                    "name": "TodaysSchedule",
+                    "Subject": "・予定していたこと、達成したこと",
+                    "Substance": "今日予定していたことや達成したことへの評価を書き込む",
+                    "initualTimes": 3,
+                    "item": {
+                        "system": "QandA",
+                        "Questions": {
+                            "sumTotal":4,
+                            "struct":{
+                                "tr1":{
+                                    "td1":"n1",
+                                    "td1":"n2"
+                                },
+                                "tr2":{
+                                    "td1":"n3"
+                                },
+                                "tr3":{
+                                    "td1":"n4"
+                                }
+                            },
+                            "n1": {
+                                "form": "textBox",
+                                "article": "件名"
+                            },
+                            "n2": {
+                                "form": "select",
+                                "article": "評価",
+                                "value" : {
+                                    "selected": "",
+                                    "table": ["","○","△","□","×"]
+                                }
+                            },
+                            "n3": {
+                                "form": "textbox",
+                                "article": "内容"
+                            },
+                            "n4": {
+                                "form": "textbox",
+                                "article": "タグ"
+                            }
+                        }
+                    }
+                },
+                "n4" :{
+                    "name": "ExperienceAndFeel",
+                    "Subject": "・今日の主なニュース",
+                    "Substance": "今日の自分の身の周りに起こった出来事やニュースを書き込む",
+                    "initualTimes": 3,
+                    "item": {
+                        "system": "QandA",
+                        "Questions": {
+                            "sumTotal":3,
+                            "struct":{
+                                "tr1":{
+                                    "td1":"n1"
+                                },
+                                "tr2":{
+                                    "td1":"n2"
+                                },
+                                "tr3":{
+                                    "td1":"n3"
+                                }
+                            },
+                            "n1": {
+                                "form": "textBox",
+                                "article": "タイトル"
+                            },
+                            "n2": {
+                                "form": "textbox",
+                                "article": "内容"
+                            },
+                            "n3": {
+                                "form": "textbox",
+                                "article": "タグ"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</value>
+  </data>
+</root>

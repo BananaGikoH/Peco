@@ -57,18 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="progs\MainForm\BrowserHomeFormEngine.cs" />
-    <Compile Include="progs\MainForm\Browser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="progs\MainForm\Browser.Designer.cs">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="progs\MainForm\BrowserHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="progs\MainForm\BrowserHomeForm.Designer.cs">
-      <DependentUpon>BrowserHomeForm.cs</DependentUpon>
+    <Compile Include="progs\archive\takeoutTxt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>takeoutTxt.resx</DependentUpon>
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserForm.cs">
       <SubType>Form</SubType>
@@ -77,30 +69,27 @@
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="progs\MainForm\DiaryBrowserFormEngine.cs" />
-    <Compile Include="progs\MainForm\HomeFormEngine.cs" />
-    <Compile Include="progs\Start\Bootstrap.cs" />
-    <Compile Include="progs\Property\BaseProperty.cs" />
-    <Compile Include="progs\Start\CatchArgs.cs" />
-    <Compile Include="progs\Start\Start.cs" />
-    <Compile Include="progs\MainForm\HomeForm.cs">
+    <Compile Include="progs\MainForm\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="progs\MainForm\HomeForm.Designer.cs">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <Compile Include="progs\MainForm\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="progs\Sys\CardinalAct.cs" />
-    <Compile Include="progs\Sys\EditJson.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <Compile Include="progs\Property\BaseProperty.cs" />
+    <Compile Include="progs\Start\Bootstrap.cs" />
+    <Compile Include="progs\Start\CatchArgs.cs" />
+    <Compile Include="progs\Start\Start.cs" />
+    <Compile Include="progs\Sys\EditSetup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DynamicJson">
       <HintPath>..\packages\DynamicJson.1.2.0.0\Content\DynamicJson.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -120,24 +109,20 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="progs\MainForm\Browser.resx">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="progs\MainForm\BrowserHomeForm.resx">
-      <DependentUpon>BrowserHomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="progs\archive\takeoutTxt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>takeoutTxt.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="progs\MainForm\DiaryBrowserForm.resx">
       <DependentUpon>DiaryBrowserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="progs\MainForm\HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="progs\MainForm\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
