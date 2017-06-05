@@ -9,16 +9,25 @@
 <br>
 <center>
 	<hr>
+	<h3><font color=blue>日記帳</font></h3>
+	<h4>現在時刻 : ～～</h4>
 	<hr>
 </center>
 
 <div class=Diary name="Diary">
+	<h4>使用しているテンプレート</h4>
 	Path : <span name="Tamplate">Default Path</span><br>
 	varsion type: <span name="TamplateVarsionType">(ex)Hush</span><br>
+	varsion : <span name="TamplateVarsion">～</span><br>
 	<br>
+	テンプレートを選択<br>
+	<BUTTON type="button" name ="TamplateChoose" onClick="">選ぶ</BUTTON> : <INPUT type="text" name="TamplatePath" size="80" value="選択して下さい"><br>
 	<br>
+	<BUTTON type="button" name ="TamplateChange" onClick="">変更</BUTTON><br>
 	<br>
 	
+	<h4>保存先</h4>
+	保存先の選択 <BUTTON type="button" name ="ShowPathOfSave" onClick="PathOfSave_Botton_Click()">選択</BUTTON><br>
 	Path : <span name="PathOfSave">Default Save Path</span><br>
 	<br>
 	<br>
@@ -103,10 +112,13 @@
 		<div class=Save>
 			<table class=SaveAndTimes>
 				<tr>
+				<td><BUTTON type="button" name ="TodaysEvents_SaveBotton" onClick="JsonSave('TodaysEvents')">保存</BUTTON></td><td><span name ="TodaysEvents_SaveTime"></span></td>
 				</tr>
 				<tr>
 				<td colspan=2><textarea cols="55" rows="6" name ="TodaysEvents_JsonString" readonly wrap=hard></textarea></td>
 				</tr>
+				<!--json文字列-->
+				<!--一回一回読み込んで、入れる場所を確認したうえで保存-->
 			</table>
 		</div>
 		<br>
@@ -192,6 +204,7 @@
 		<div class=Save>
 			<table class=SaveAndTimes>
 				<tr>
+				<td><BUTTON type="button" name ="TodaysNews_SaveBotton" onClick="JsonSave('TodaysNews')">保存</BUTTON></td><td><span name ="TodaysNews_SaveTime"></span></td>
 				</tr>
 				<tr>
 				<td colspan=2><textarea cols="55" rows="6" name ="TodaysNews_JsonString" readonly wrap=hard></textarea></td>
@@ -217,6 +230,10 @@
 				<td>
 				<select name="TodaysSchedule_1_Answer2">
 				<option value="space" selected></option>
+				<option value="○">○</option>
+				<option value="△">△</option>
+				<option value="□">□</option>
+				<option value="×">×</option>
 				</td>
 				</tr>
 				<tr>
@@ -236,6 +253,10 @@
 				<td>
 				<select name="TodaysSchedule_2_Answer2">
 				<option value="space" selected></option>
+				<option value="○">○</option>
+				<option value="△">△</option>
+				<option value="□">□</option>
+				<option value="×">×</option>
 				</td>
 				</tr>
 				<tr>
@@ -255,6 +276,10 @@
 				<td>
 				<select name="TodaysSchedule_3_Answer2">
 				<option value="space" selected></option>
+				<option value="○">○</option>
+				<option value="△">△</option>
+				<option value="□">□</option>
+				<option value="×">×</option>
 				</td>
 				</tr>
 				<tr>
@@ -269,6 +294,7 @@
 		<div class=Save>
 			<table class=SaveAndTimes>
 				<tr>
+				<td><BUTTON type="button" name ="TodaysSchedule_SaveBotton" onClick="JsonSave('TodaysSchedule')">保存</BUTTON></td><td><span name ="TodaysSchedule_SaveTime"></span></td>
 				</tr>
 				<tr>
 				<td colspan=2><textarea cols="55" rows="6" name ="TodaysSchedule_JsonString" readonly wrap=hard></textarea></td>
@@ -358,6 +384,7 @@
 		<div class=Save>
 			<table class=SaveAndTimes>
 				<tr>
+				<td><BUTTON type="button" name ="ExperienceAndFeel_SaveBotton" onClick="JsonSave('ExperienceAndFeel')">保存</BUTTON></td><td><span name ="ExperienceAndFeel_SaveTime"></span></td>
 				</tr>
 				<tr>
 				<td colspan=2><textarea cols="55" rows="6" name ="ExperienceAndFeel_JsonString" readonly wrap=hard></textarea></td>
@@ -369,6 +396,9 @@
 </div>
 
 <!--
+class 個別に指定するとき
+name 文字を変更したりjsで変更したりするとき
+id 各個別に設定したいとき
 -->
 
 </body>
