@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DiaryBasic_html" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\DiaryBasic_html.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="DiaryCSS_css" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\DiaryCSS_css.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="DiaryJavascript_js" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\DiaryJavascript_js.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="ExampleDiaryQuestion_json" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\Resources\ExampleDiaryQuestion_json.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
 </root>

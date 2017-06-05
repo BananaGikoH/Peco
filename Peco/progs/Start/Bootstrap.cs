@@ -3,6 +3,7 @@ using pecopeco.progs.MainForm;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using pecopeco.progs.archive;
 
 namespace pecopeco.progs.Start {
 	public class Bootstrap {
@@ -28,7 +29,7 @@ namespace pecopeco.progs.Start {
 			if(!(Directory.Exists(@"setup"))) {
 				Directory.CreateDirectory(@"setup");
 			}
-			
+
 			//将来はJsonの中身で検索、指定をかけても良いかもしれない
 			if(!(File.Exists(@"setup\peco_wholeSetup.json"))) {
 				Encoding enc = new UTF8Encoding(false);
@@ -51,6 +52,36 @@ namespace pecopeco.progs.Start {
 				BP.SJ.JustGetStarted.firstLaunch = false;
 				BP.UpdateSJ();
 			}
+
+			//リソースファイルを書き出す
+			if(!(Directory.Exists(@"Diary"))) {
+				Directory.CreateDirectory(@"Diary");
+			}
+			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html",false,enc);
+				sw.Write(takeoutTxt.DiaryBasic_html);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\DiaryJavascript.js"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryJavascript.js",false,enc);
+				sw.Write(takeoutTxt.DiaryJavascript_js);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\DiaryCSS.css"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css",false,enc);
+				sw.Write(takeoutTxt.DiaryCSS_css);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\ExampleDiaryQuestion.json"))) {
+				Encoding enc = new UTF8Encoding(false);
+				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json",false,enc);
+				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
+				sw.Close();
+			}
 		}
 	}
 }
+

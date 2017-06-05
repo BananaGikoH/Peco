@@ -1,0 +1,375 @@
+<?xml version="1.0" encording="UTF-8"?>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<link rel="stylesheet" type="text/css" href="DiaryCSS.css">
+<script type="text/javascript" src="Diary_JavaScript.js"></script>
+
+<body>
+<br>
+<center>
+	<hr>
+	<hr>
+</center>
+
+<div class=Diary name="Diary">
+	Path : <span name="Tamplate">Default Path</span><br>
+	varsion type: <span name="TamplateVarsionType">(ex)Hush</span><br>
+	<br>
+	<br>
+	<br>
+	
+	Path : <span name="PathOfSave">Default Save Path</span><br>
+	<br>
+	<br>
+	<form class =Article name="TodaysEvents">
+		<div class=Subject>
+			<div name="Subject_TodaysEvents">$1</div>
+		</div>
+		<div class=Substance>
+			<div name="Substance_TodaysEvents">$2</div>
+		</div>
+		<div class =Forms>
+			<div name="TodaysEvents_1">
+				<div class=FormNum name="TodaysEvents_1_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_1_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_1_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_1_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_1_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_1_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_1_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="TodaysEvents_2">
+				<div class=FormNum name="TodaysEvents_2_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_2_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_2_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_2_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_2_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_2_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_2_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="TodaysEvents_3">
+				<div class=FormNum name="TodaysEvents_3_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_3_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_3_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_3_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_3_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysEvents_3_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysEvents_3_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+		<div class=Save>
+			<table class=SaveAndTimes>
+				<tr>
+				</tr>
+				<tr>
+				<td colspan=2><textarea cols="55" rows="6" name ="TodaysEvents_JsonString" readonly wrap=hard></textarea></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+	</form>
+	<form class =Article name="TodaysNews">
+		<div class=Subject>
+			<div name="Subject_TodaysNews">$1</div>
+		</div>
+		<div class=Substance>
+			<div name="Substance_TodaysNews">$2</div>
+		</div>
+		<div class =Forms>
+			<div name="TodaysNews_1">
+				<div class=FormNum name="TodaysNews_1_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysNews_1_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_1_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_1_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_1_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_1_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_1_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="TodaysNews_2">
+				<div class=FormNum name="TodaysNews_2_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysNews_2_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_2_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_2_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_2_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_2_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_2_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="TodaysNews_3">
+				<div class=FormNum name="TodaysNews_3_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="TodaysNews_3_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_3_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_3_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_3_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="TodaysNews_3_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="TodaysNews_3_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+		<div class=Save>
+			<table class=SaveAndTimes>
+				<tr>
+				</tr>
+				<tr>
+				<td colspan=2><textarea cols="55" rows="6" name ="TodaysNews_JsonString" readonly wrap=hard></textarea></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+	</form>
+	<div name=TodaysSchedule class =Article>
+		<div class=Subject>
+			<div name=Subject_TodaysSchedule>$1</div>
+		</div>
+		<div class=Substance>
+			<div name=Substance_TodaysSchedule>$2</div>
+		</div>
+		<form class =Forms>
+			<div>
+				<div class=FormNum name=TodaysSchedule_1_num>0</div>
+				<table class=Contents>
+				<tr>
+				<td><span name="TodaysSchedule_1_Question1">$1</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_1_Answer1"></td>
+				<td><span name="TodaysSchedule_1_Question2">$2</span></td><td> : </td>
+				<td>
+				<select name="TodaysSchedule_1_Answer2">
+				<option value="space" selected></option>
+				</td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_1_Question3">$3</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_1_Answer3"></td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_1_Question4">$4</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_1_Answer4"></td>
+				</tr>
+				</table>
+			</div>
+			<div>
+				<div class=FormNum name=TodaysSchedule_2_num>0</div>
+				<table class=Contents>
+				<tr>
+				<td><span name="TodaysSchedule_2_Question1">$1</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_2_Answer1"></td>
+				<td><span name="TodaysSchedule_2_Question2">$2</span></td><td> : </td>
+				<td>
+				<select name="TodaysSchedule_2_Answer2">
+				<option value="space" selected></option>
+				</td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_2_Question3">$3</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_2_Answer3"></td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_2_Question4">$4</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_2_Answer4"></td>
+				</tr>
+				</table>
+			</div>
+			<div>
+				<div class=FormNum name=TodaysSchedule_3_num>0</div>
+				<table class=Contents>
+				<tr>
+				<td><span name="TodaysSchedule_3_Question1">$1</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_3_Answer1"></td>
+				<td><span name="TodaysSchedule_3_Question2">$2</span></td><td> : </td>
+				<td>
+				<select name="TodaysSchedule_3_Answer2">
+				<option value="space" selected></option>
+				</td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_3_Question3">$3</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_3_Answer3"></td>
+				</tr>
+				<tr>
+				<td><span name="TodaysSchedule_3_Question4">$4</span></td><td> : </td><td><INPUT type="text" name="TodaysSchedule_3_Answer4"></td>
+				</tr>
+				</table>
+			</div>
+		</form>
+		<div class=Save>
+			<table class=SaveAndTimes>
+				<tr>
+				</tr>
+				<tr>
+				<td colspan=2><textarea cols="55" rows="6" name ="TodaysSchedule_JsonString" readonly wrap=hard></textarea></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+	</div>
+	<div name=ExperienceAndFeel class =Article>
+		<div class=Subject>
+			<div name=Subject_ExperienceAndFeel>$1</div>
+		</div>
+		<div class=Substance>
+			<div name=Substance_ExperienceAndFeel>$2</div>
+		</div>
+		<div class =Forms>
+			<div name="ExperienceAndFeel_1">
+				<div class=FormNum name="ExperienceAndFeel_1_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_1_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_1_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_1_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_1_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_1_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_1_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="ExperienceAndFeel_2">
+				<div class=FormNum name="ExperienceAndFeel_2_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_2_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_2_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_2_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_2_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_2_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_2_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+			<div name="ExperienceAndFeel_3">
+				<div class=FormNum name="ExperienceAndFeel_3_num">0</div>
+				<table class=Contents>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_3_Question1">$1</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_3_Answer1"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_3_Question2">$2</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_3_Answer2"></td>
+				</tr>
+				<tr>
+				<td colspan =2><span name="ExperienceAndFeel_3_Question3">$3</span></td>
+				</tr>
+				<tr>
+				<td> : </td><td><INPUT type="text" name="ExperienceAndFeel_3_Answer3"></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+		<div class=Save>
+			<table class=SaveAndTimes>
+				<tr>
+				</tr>
+				<tr>
+				<td colspan=2><textarea cols="55" rows="6" name ="ExperienceAndFeel_JsonString" readonly wrap=hard></textarea></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+	</div>
+</div>
+
+<!--
+-->
+
+</body>
+</html>

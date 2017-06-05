@@ -1,0 +1,37 @@
+* {
+	position:relative;
+	left:0px;
+	top:0px;
+}
+
+.Diary {
+	position:relative;
+	left:200px;
+}
+.Article {
+	position:relative;
+	left:30px;
+}
+.Subject {
+	font-weight: bold;
+	color:blue;
+}
+.Substance {
+	font-weight: bold;
+}
+.Forms {
+	position:relative;
+	top:15px;
+	left:50px;
+}
+.FormNum {
+}
+.Contents {
+	position:relative;
+	left:20px;
+}
+.Save{
+	position:relative;
+	top:15px;
+	left:40px;
+}

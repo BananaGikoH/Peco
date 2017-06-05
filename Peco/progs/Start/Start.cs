@@ -22,12 +22,29 @@ namespace pecopeco.progs.Start {
 			Bootstrap start = new Bootstrap();
 			start.booting();
 
+			int num = 0;
 			CatchArgs ca = new CatchArgs();
-			ca.ArgsMenu(args);
+			num = ca.ArgsMenu(args);
 
-			DiaryBrowserForm DBF = new DiaryBrowserForm();
-			Application.Run(DBF);
-
+			Start ma = new Start();
+			ma.numcheck(num);
+		}
+		void numcheck(int num) {
+			//通常起動のとき
+			if(0 == num) {
+				DiaryBrowserForm DBF = new DiaryBrowserForm();
+				Application.Run(DBF);
+			}
+			//takeoffmode(見えないモード)
+			if(1100 == num) {
+				MessageBox.Show("take off mode Goes on ...","takeoff mode");
+			}
+			//debug mode
+			if(9999 == num) {
+				MessageBox.Show("debug mode Goes on ...","debug mode");
+				DiaryBrowserForm DBF = new DiaryBrowserForm();
+				Application.Run(DBF);
+			}
 		}
 	}
 }
