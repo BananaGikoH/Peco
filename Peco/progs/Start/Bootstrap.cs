@@ -58,26 +58,22 @@ namespace pecopeco.progs.Start {
 				Directory.CreateDirectory(@"Diary");
 			}
 			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
-				Encoding enc = new UTF8Encoding(false);
-				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html",false,enc);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html");
 				sw.Write(takeoutTxt.DiaryBasic_html);
 				sw.Close();
 			}
 			if(!(File.Exists(@"Diary\DiaryJavascript.js"))) {
-				Encoding enc = new UTF8Encoding(false);
-				StreamWriter sw = new StreamWriter(@"Diary\DiaryJavascript.js",false,enc);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryJavascript.js");
 				sw.Write(takeoutTxt.DiaryJavascript_js);
 				sw.Close();
 			}
 			if(!(File.Exists(@"Diary\DiaryCSS.css"))) {
-				Encoding enc = new UTF8Encoding(false);
-				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css",false,enc);
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css");
 				sw.Write(takeoutTxt.DiaryCSS_css);
 				sw.Close();
 			}
 			if(!(File.Exists(@"Diary\ExampleDiaryQuestion.json"))) {
-				Encoding enc = new UTF8Encoding(false);
-				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json",false,enc);
+				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json");
 				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
 				sw.Close();
 			}

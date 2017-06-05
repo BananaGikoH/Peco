@@ -72,14 +72,14 @@ namespace pecopeco.progs.archive {
         ///&lt;br&gt;
         ///&lt;center&gt;
         ///	&lt;hr&gt;
-        ///	&lt;h3&gt;&lt;font color=blue&gt;譌･險伜ｸｳ&lt;/font&gt;&lt;/h3&gt;
-        ///	&lt;h4&gt;迴ｾ蝨ｨ譎ょ綾 : ・橸ｽ・/h4&gt;
+        ///	&lt;h3&gt;&lt;font color=blue&gt;日記帳&lt;/font&gt;&lt;/h3&gt;
+        ///	&lt;h4&gt;現在時刻 : ～～&lt;/h4&gt;
         ///	&lt;hr&gt;
         ///&lt;/center&gt;
         ///
         ///&lt;div class=Diary name=&quot;Diary&quot;&gt;
-        ///	&lt;h4&gt;菴ｿ逕ｨ縺励※縺・ｋ繝・Φ繝励Ξ繝ｼ繝・/h4&gt;
-        ///	Path : &lt;span name=&quot;Tampl [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///	&lt;h4&gt;使用しているテンプレート&lt;/h4&gt;
+        ///	Path : &lt;span name=&quot;Tamplate&quot;&gt;Default P [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DiaryBasic_html {
             get {
@@ -124,8 +124,7 @@ namespace pecopeco.progs.archive {
         ///	position:relative;
         ///	top:15px;
         ///	left:40px;
-        ///}
-        /// に類似しているローカライズされた文字列を検索します。
+        ///} に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DiaryCSS_css {
             get {
@@ -136,21 +135,22 @@ namespace pecopeco.progs.archive {
         /// <summary>
         ///   function start()
         ///{
-        ///    //繝・Φ繝励Ξ繝ｼ繝域枚蟄怜・繧偵Ο繝ｼ繝・
+        ///    //テンプレート文字列をロード
         ///    var path = window.external.ThrowTemplatePath();
         ///    var flame =document.getElementsByName(&quot;Tamplate&quot;);
         ///    flame[0].innerHTML = path;
         ///    
-        ///    //菫晏ｭ伜・繝代せ譁・ｭ怜・繧偵Ο繝ｼ繝・
+        ///    //保存先パス文字列をロード
         ///    var foo = window.external.ThrowSavePath();
         ///    var ooo =document.getElementsByName(&quot;PathOfSave&quot;);
         ///    ooo[0].innerHTML = foo;
         ///    
-        ///    //繝・Φ繝励Ξ繝ｼ繝医ｒ繝ｭ繝ｼ繝・
+        ///    //テンプレートをロード
         ///    var info = window.external.Load(flame[0].innerHTML);
         ///    var obj = JSON.parse(info);
         ///    
-        ///    //g 繝√Ε繝励ち繝ｼ縺ｮ荳ｭ縺ｮ遞ｮ蛻･驕ｸ謚 [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        ///    //g チャプターの中の種別選択
+        ///    var ChapterSelect = obj [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DiaryJavascript_js {
             get {

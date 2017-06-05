@@ -124,18 +124,6 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiaryCSS_css.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ExampleDiaryQuestion_json.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiaryJavascript_js.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DiaryBasic_html.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
