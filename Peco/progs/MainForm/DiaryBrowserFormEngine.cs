@@ -11,6 +11,7 @@ namespace pecopeco.progs.MainForm {
 
 			Uri u1 = new Uri(BPJ.CurrentDirectory() + @"\");
 			Uri u2 = new Uri(u1,@"Diary\DiaryBasic.html");
+			//Uri u2 = new Uri(u1,@"Diary\base.html");
 
 			return u2.AbsoluteUri;
 		}

@@ -16,11 +16,11 @@
 
 # Build results
 
-[Dd]ebug/
+#[Dd]ebug/
 [Rr]elease/
 x64/
 build/
-[Bb]in/
+#[Bb]in/
 [Oo]bj/
 
 # MSTest test Results
@@ -157,3 +157,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 
+##
+Diary/
+setup/
