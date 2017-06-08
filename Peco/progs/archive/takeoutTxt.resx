@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="baseHTML" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encording="UTF-8"?&gt;
+&lt;html&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=11" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="DiaryCSS.css"&gt;
+&lt;script type="text/javascript" src="makeHTML.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+&lt;span name="hoge001"&gt;&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
   <data name="DiaryBasic_html" xml:space="preserve">
     <value>&lt;?xml version="1.0" encording="UTF-8"?&gt;
 &lt;html&gt;
@@ -860,5 +872,33 @@ function JsonSave(str)
         }
     }
 }</value>
+  </data>
+  <data name="makeHTML_js" xml:space="preserve">
+    <value>function star()
+{
+    bigger();
+}
+function bigger()
+{
+    var ooo =document.getElementsByName("hoge001");
+    var foo ="&lt;center&gt;&lt;hr&gt;&lt;h3&gt;&lt;font color=blue&gt;日記帳&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;現在時刻 : ～～&lt;/h4&gt;&lt;hr&gt;&lt;/center&gt;";
+    var bar ='&lt;div class=Diary name="Diary"&gt;&lt;/div&gt;';
+    foo = foo.concat(bar);
+    ooo[0].innerHTML = foo;
+    
+    var art = "";
+    var art01 ='&lt;form class =Article name="TodaysEvents"&gt;TodaysEvents&lt;/form&gt;'
+    var art02 ='&lt;form class =Article name="TodaysNews"&gt;TodaysNews&lt;/form&gt;'
+    var art03 ='&lt;div class =Article name="TodaysSchedule"&gt;TodaysSchedule&lt;/div&gt;'
+    var art04 ='&lt;div class =Article name="ExperienceAndFeel"&gt;ExperienceAndFeel&lt;/div&gt;'
+    art = art.concat(art01);
+    art = art.concat(art02);
+    art = art.concat(art03);
+    art = art.concat(art04);
+    
+    var KKK =document.getElementsByName("Diary");
+    KKK[0].innerHTML = art;
+}
+window.onload = star;</value>
   </data>
 </root>

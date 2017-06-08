@@ -61,6 +61,24 @@ namespace pecopeco.progs.archive {
         }
         
         /// <summary>
+        ///   &lt;?xml version=&quot;1.0&quot; encording=&quot;UTF-8&quot;?&gt;
+        ///&lt;html&gt;
+        ///&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+        ///&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=11&quot; /&gt;
+        ///&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;DiaryCSS.css&quot;&gt;
+        ///&lt;script type=&quot;text/javascript&quot; src=&quot;makeHTML.js&quot;&gt;&lt;/script&gt;
+        ///&lt;body&gt;
+        ///&lt;span name=&quot;hoge001&quot;&gt;&lt;/span&gt;
+        ///&lt;/body&gt;
+        ///&lt;/html&gt; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string baseHTML {
+            get {
+                return ResourceManager.GetString("baseHTML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   function start()
         ///{
         ///    //テンプレート文字列をロード
@@ -183,6 +201,30 @@ namespace pecopeco.progs.archive {
         internal static string ExampleDiaryQuestion_json {
             get {
                 return ResourceManager.GetString("ExampleDiaryQuestion_json", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   function star()
+        ///{
+        ///    bigger();
+        ///}
+        ///function bigger()
+        ///{
+        ///    var ooo =document.getElementsByName(&quot;hoge001&quot;);
+        ///    var foo =&quot;&lt;center&gt;&lt;hr&gt;&lt;h3&gt;&lt;font color=blue&gt;日記帳&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;現在時刻 : ～～&lt;/h4&gt;&lt;hr&gt;&lt;/center&gt;&quot;;
+        ///    var bar =&apos;&lt;div class=Diary name=&quot;Diary&quot;&gt;&lt;/div&gt;&apos;;
+        ///    foo = foo.concat(bar);
+        ///    ooo[0].innerHTML = foo;
+        ///    
+        ///    var art = &quot;&quot;;
+        ///    var art01 =&apos;&lt;form class =Article name=&quot;TodaysEvents&quot;&gt;TodaysEvents&lt;/form&gt;&apos;
+        ///    var art02 =&apos;&lt;form class =Article name=&quot;TodaysNews&quot;&gt;TodaysNews&lt;/form&gt;&apos;
+        ///    var art0 [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string makeHTML_js {
+            get {
+                return ResourceManager.GetString("makeHTML_js", resourceCulture);
             }
         }
     }

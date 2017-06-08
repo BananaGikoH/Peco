@@ -80,6 +80,7 @@
     <Compile Include="progs\Start\CatchArgs.cs" />
     <Compile Include="progs\Start\Start.cs" />
     <Compile Include="progs\Sys\EditSetup.cs" />
+    <Compile Include="progs\Sys\ReadJson.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DynamicJson">

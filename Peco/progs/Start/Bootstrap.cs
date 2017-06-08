@@ -30,27 +30,45 @@ namespace pecopeco.progs.Start {
 			if(!(Directory.Exists(@"Diary"))) {
 				Directory.CreateDirectory(@"Diary");
 			}
+			/**/
 			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
 				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html");
+				//
 				sw.Write(takeoutTxt.DiaryBasic_html);
 				sw.Close();
 			}
+			/*
+			if(!(File.Exists(@"Diary\base.html"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\base.html");
+				//
+				sw.Write(takeoutTxt.baseHTML);
+				sw.Close();
+			}
+			if(!(File.Exists(@"Diary\makeHTML.js"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\makeHTML.js");
+				//
+				sw.Write(takeoutTxt.makeHTML_js);
+				sw.Close();
+			}
+			*/
 			if(!(File.Exists(@"Diary\Diary_JavaScript.js"))) {
 				StreamWriter sw = new StreamWriter(@"Diary\Diary_JavaScript.js");
 				sw.Write(takeoutTxt.Diary_JavaScript_js);
 				sw.Close();
 			}
+			
 			if(!(File.Exists(@"Diary\DiaryCSS.css"))) {
 				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css");
 				sw.Write(takeoutTxt.DiaryCSS_css);
 				sw.Close();
 			}
+			
 			if(!(File.Exists(@"Diary\ExampleDiaryQuestion.json"))) {
 				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json");
 				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
 				sw.Close();
 			}
-
+			
 			if(!(Directory.Exists(@"setup"))) {
 				Directory.CreateDirectory(@"setup");
 			}
