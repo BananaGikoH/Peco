@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using pecopeco.progs.archive;
+using Codeplex.Data;
 
 namespace pecopeco.progs.Start {
 	public class Bootstrap {
@@ -26,49 +27,6 @@ namespace pecopeco.progs.Start {
 		 */
 		void setProperty() {
 
-			//リソースファイルを書き出す
-			if(!(Directory.Exists(@"Diary"))) {
-				Directory.CreateDirectory(@"Diary");
-			}
-			/**/
-			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html");
-				//
-				sw.Write(takeoutTxt.DiaryBasic_html);
-				sw.Close();
-			}
-			/*
-			if(!(File.Exists(@"Diary\base.html"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\base.html");
-				//
-				sw.Write(takeoutTxt.baseHTML);
-				sw.Close();
-			}
-			if(!(File.Exists(@"Diary\makeHTML.js"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\makeHTML.js");
-				//
-				sw.Write(takeoutTxt.makeHTML_js);
-				sw.Close();
-			}
-			*/
-			if(!(File.Exists(@"Diary\Diary_JavaScript.js"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\Diary_JavaScript.js");
-				sw.Write(takeoutTxt.Diary_JavaScript_js);
-				sw.Close();
-			}
-			
-			if(!(File.Exists(@"Diary\DiaryCSS.css"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\DiaryCSS.css");
-				sw.Write(takeoutTxt.DiaryCSS_css);
-				sw.Close();
-			}
-			
-			if(!(File.Exists(@"Diary\ExampleDiaryQuestion.json"))) {
-				StreamWriter sw = new StreamWriter(@"Diary\ExampleDiaryQuestion.json");
-				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
-				sw.Close();
-			}
-			
 			if(!(Directory.Exists(@"setup"))) {
 				Directory.CreateDirectory(@"setup");
 			}
@@ -80,8 +38,25 @@ namespace pecopeco.progs.Start {
 				sw.Write(ES.createFirstRuleJson());
 				sw.Close();
 			}
-
+			//読み出してBasePropertyに保存
 			ES.startStep();
+
+			//全体の基礎になるHTMLを生成
+			if(!(File.Exists(@"setup\Base.html"))) {
+				StreamWriter sw = new StreamWriter(@"setup\Base.html");
+				sw.Write(takeoutTxt.BaseHTML);
+				sw.Close();
+			}
+			if(!(File.Exists(@"setup\BaseJS.js"))) {
+				StreamWriter sw = new StreamWriter(@"setup\BaseJS.js");
+				sw.Write(takeoutTxt.BaseJS_js);
+				sw.Close();
+			}
+			if(!(File.Exists(@"setup\BaseCSS.cs"))) {
+				StreamWriter sw = new StreamWriter(@"setup\BaseCSS.css");
+				sw.Write(takeoutTxt.BaseCSS_css);
+				sw.Close();
+			}
 
 			//初期設定のためのHTMLを作成
 			if(BP.SJ.JustGetStarted.firstLaunch) {
@@ -94,6 +69,64 @@ namespace pecopeco.progs.Start {
 				//firstLaunchをfalseに
 				BP.SJ.JustGetStarted.firstLaunch = false;
 				BP.UpdateSJ();
+			}
+
+			string[] temprateName = new string[0];
+			//初期設定で使用するテンプレートを読み込む
+			int ch = 1;
+			int i = 0;
+			while(ch==1) {
+				//MessageBox.Show(BP.SJ.DefaultTemplate.IsDefined("n_" + i).ToString());
+				if(BP.SJ.DefaultTemplate.IsDefined("n_" + i)) {
+					System.Array.Resize(ref temprateName,i+1);
+					temprateName[i] = "";
+					temprateName[i] = BP.SJ.DefaultTemplate["n_" + i]["name"];
+					i = i + 1;
+				} else {
+					ch = 0;
+				}
+			}
+
+			for(i = 0; i < temprateName.Length; i++) {
+				//各テンプレートごとの処理
+				//リソースファイルを書き出す
+				//temprateName[i] 各テンプレートの名称
+				if(!(Directory.Exists(@"Template\" + temprateName[i]))) {
+					Directory.CreateDirectory(@"Template\" + temprateName[i]);
+				}
+			}
+			/*
+			if(!(File.Exists(@"Diary\DiaryBasic.html"))) {
+				StreamWriter sw = new StreamWriter(@"Diary\DiaryBasic.html");
+				//
+				sw.Write(takeoutTxt.DiaryBasic_html);
+				sw.Close();
+			}
+			*/
+			/**/
+			if(!(File.Exists(@"Template\Diary\makeHTML.js"))) {
+				StreamWriter sw = new StreamWriter(@"Template\Diary\makeHTML.js");
+				//
+				sw.Write(takeoutTxt.BaseJS_js);
+				sw.Close();
+			}
+			/**/
+			if(!(File.Exists(@"Template\Diary\Diary_JavaScript.js"))) {
+				StreamWriter sw = new StreamWriter(@"Template\Diary\Diary_JavaScript.js");
+				sw.Write(takeoutTxt.Diary_JavaScript_js);
+				sw.Close();
+			}
+			
+			if(!(File.Exists(@"Template\Diary\DiaryCSS.css"))) {
+				StreamWriter sw = new StreamWriter(@"Template\Diary\DiaryCSS.css");
+				sw.Write(takeoutTxt.DiaryCSS_css);
+				sw.Close();
+			}
+			
+			if(!(File.Exists(@"Template\Diary\ExampleDiaryQuestion.json"))) {
+				StreamWriter sw = new StreamWriter(@"Template\Diary\ExampleDiaryQuestion.json");
+				sw.Write(takeoutTxt.ExampleDiaryQuestion_json);
+				sw.Close();
 			}
 		}
 	}

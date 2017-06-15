@@ -117,15 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="baseHTML" xml:space="preserve">
+  <data name="BaseHTML" xml:space="preserve">
     <value>&lt;?xml version="1.0" encording="UTF-8"?&gt;
 &lt;html&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
 &lt;meta http-equiv="X-UA-Compatible" content="IE=11" /&gt;
-&lt;link rel="stylesheet" type="text/css" href="DiaryCSS.css"&gt;
-&lt;script type="text/javascript" src="makeHTML.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="BaseCSS.css"&gt;
+&lt;script type="text/javascript" src="BaseJS.js"&gt;&lt;/script&gt;
 &lt;body&gt;
-&lt;span name="hoge001"&gt;&lt;/span&gt;
+&lt;div class="js-tabs"&gt;
+  &lt;ul id="tab_menu1" class="tab_menu"&gt;
+    &lt;li&gt;&lt;a href="#page1-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#page1-2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#page1-3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div id="tab_content1" class="tab_content"&gt;
+    &lt;div id="page1-1" class="page"&gt;
+      &lt;span name="base"&gt;&lt;/span&gt;
+      Page 1
+    &lt;/div&gt;
+    &lt;div id="page1-2" class="page"&gt;
+      Page 2
+    &lt;/div&gt;
+    &lt;div id="page1-3" class="page"&gt;
+      Page 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>
@@ -873,14 +892,41 @@ function JsonSave(str)
     }
 }</value>
   </data>
-  <data name="makeHTML_js" xml:space="preserve">
-    <value>function star()
-{
-    bigger();
+  <data name="BaseJS_js" xml:space="preserve">
+    <value>function tabMake(){
+    var menu = document.getElementById('tab_menu1');
+    var content = document.getElementById('tab_content1');
+    var menus = menu.getElementsByTagName('a');
+    var current; // 現在の状態を保持する変数
+    for (var i = 0, l = menus.length;i &lt; l; i++){
+        tab_init(menus[i], i);
+    }
+    function tab_init(link, index){
+        var id = link.hash.slice(1);
+        var page = document.getElementById(id);
+        if (!current){ // 状態の初期化
+            current = {page:page, menu:link};
+            page.style.display = 'block';
+            link.className = 'active';
+        } else {
+            page.style.display = 'none';
+        }
+        link.onclick = function(){
+            current.page.style.display = 'none';
+            current.menu.className = '';
+            page.style.display = 'block';
+            link.className = 'active';
+            current.page = page;
+            current.menu = link;
+            return false;
+        };
+    }
+    star();
 }
-function bigger()
+window.onload = tabMake;
+function star()
 {
-    var ooo =document.getElementsByName("hoge001");
+    var ooo =document.getElementsByName("base");
     var foo ="&lt;center&gt;&lt;hr&gt;&lt;h3&gt;&lt;font color=blue&gt;日記帳&lt;/font&gt;&lt;/h3&gt;&lt;h4&gt;現在時刻 : ～～&lt;/h4&gt;&lt;hr&gt;&lt;/center&gt;";
     var bar ='&lt;div class=Diary name="Diary"&gt;&lt;/div&gt;';
     foo = foo.concat(bar);
@@ -898,7 +944,55 @@ function bigger()
     
     var KKK =document.getElementsByName("Diary");
     KKK[0].innerHTML = art;
+}</value>
+  </data>
+  <data name="BaseCSS_css" xml:space="preserve">
+    <value>.js-tabs ul.tab_menu{
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
 }
-window.onload = star;</value>
+.js-tabs ul.tab_menu li{
+  display:inline;
+  background:#666;
+  margin:0px;
+  padding:2px;
+}
+.js-tabs .tab_menu li a{
+  padding:3px;
+}
+.js-tabs .tab_menu li a:link,
+.js-tabs .tab_menu li a:visited{
+  background-color:#666;
+  color:#fff;
+}
+.js-tabs .tab_menu li a.active:link,
+.js-tabs .tab_menu li a.active:visited{
+  background-color:#444;
+  color:#fff;
+}
+.js-tabs .tab_menu li a:hover{
+  background-color:#333;
+  color:#f0f;
+}
+.tab_content{
+  position:relative;
+  height:200px;
+}
+.tab_content div.page{
+  width:450px;
+  height:200px;
+  position:absolute;
+  color:#222;
+}
+#page1-1{
+  background-color:#ffa;
+}
+#page1-2{
+  background-color:#faf;
+}
+#page1-3{
+  background-color:#aff;
+}</value>
   </data>
 </root>

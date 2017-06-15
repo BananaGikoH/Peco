@@ -10,8 +10,9 @@ namespace pecopeco.progs.MainForm {
 		public string SendURI() {
 
 			Uri u1 = new Uri(BPJ.CurrentDirectory() + @"\");
-			Uri u2 = new Uri(u1,@"Diary\DiaryBasic.html");
+			//Uri u2 = new Uri(u1,@"Diary\DiaryBasic.html");
 			//Uri u2 = new Uri(u1,@"Diary\base.html");
+			Uri u2 = new Uri(u1,@"setup\Base.html");
 
 			return u2.AbsoluteUri;
 		}

@@ -22,6 +22,21 @@ namespace pecopeco.progs.Sys {
 				CurrentDirectory = new {
 					change = false,
 					userSet = ""
+				},
+				TemplateAddress = new {
+					Initial = "Template/",
+					change = false,
+					userSet = ""
+				},
+				DefaultTemplate = new {
+					n_0 = new {
+						name = "Diary",
+						hash = ""
+					},
+					n_1 = new {
+						name = "test",
+						hash = ""
+					}
 				}
 			};
 			string firstRule = "";
